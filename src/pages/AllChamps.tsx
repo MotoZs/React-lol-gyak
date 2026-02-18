@@ -41,7 +41,7 @@ const cardItem = (c: Champion) => {
     <>
       <h1>Championok</h1>
       <Button variant="success" onClick={() => navigate("/newchamp")}>
-        Új autó Hozzáadása
+        Új champion Hozzáadása
       </Button>
       <Button variant="success" onClick={() => navigate("/login")}>
         Login

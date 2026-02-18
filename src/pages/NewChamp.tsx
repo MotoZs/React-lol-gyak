@@ -3,10 +3,11 @@ import { Col, Row, Form, Button } from "react-bootstrap";
 import apiClient from "../api/apiClient";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import type { Champion } from "../types/Champions";
 
 const NewChamp = () => {
   const navigate = useNavigate();
-  const [newChamp, setNewChamp] = useState({
+  const [newChamp, setNewChamp] = useState<Champion>({
     name: "",
     role: "",
     lane: "",
@@ -114,7 +115,7 @@ const NewChamp = () => {
               onChange={(e) =>
                 setNewChamp({
                   ...newChamp,
-                  //images: e.target.value.split(",").map((s) => s.trim()),
+                  images: e.target.value.split(",").map((s) => s.trim()),
                 })
               }
             />
